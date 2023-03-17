@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -28,18 +28,35 @@
 <body>
     <div class="col-lg-11 mx-auto p-3 py-md-3">
         <nav class="navbar sticky-top navbar-light bg-light">
-            <div class="container-fluid">
-                <label for="exampleDataList" class="form-label">Поиск пациента</label>
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Введите номер клапана">
-                <datalist id="datalistOptions">
-                    <option value="578954">
-                    <option value="578955">
-                    <option value="578956">
-                    <option value="578957">
-                    <option value="578958">
-                </datalist>
+            <div id="popup2" class="popup2">
+                <a href="#" class="popup_area2"></a>
+                <div class="popup_body2">
+                    <div class="popup_content2">
+                        <a href="#" class="popup_close2">X</a>
+                        <div class="popup_title2">Титле</div>
+                        <div class="popup_text2">
+                            <div style="" id="myDIV" class="header">
+                                <h2>Мой список дел</h2>
+                                <input type="text" id="myInput" placeholder="Название...">
+                                <span onclick="newElement()" class="addBtn">Добавить</span>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" width='120%'>Главная</button>
+            <div class="container-fluid">
+                <!-- <label for="exampleDataList" class="form-label">Поиск пациента</label>
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Введите номер клапана">
+        <datalist id="datalistOptions">
+            <option value="578954">
+            <option value="578955">
+            <option value="578956">
+            <option value="578957">
+            <option value="578958">
+        </datalist> -->
+
+                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" width='120%'>Меню</button>
 
                 <h1 id='nav-1'>Жить</h1>
 
@@ -52,46 +69,37 @@
                     </div>
                     <div class="offcanvas-body">
                         <div class="d-grid gap-2">
-                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page03').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page01').style.display='block'; document.getElementById('nav-2').style.display='none'; document.getElementById('nav-3').style.display='none'; document.getElementById('nav-1').style.display='block'">Пульс</a>
-                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page02').style.display='block';">Давление</a>
-                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page03').style.display='block';">Вес</a>
-                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page04').style.display='block';">Вредные привычки</a>
-                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page05').style.display='block'; ">Болезни</a>
-                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page06').style.display='block'; ">Прописанные лекарства</a>
-                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page07').style.display='block'; ">Непереносимые лекарства</a>
+                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page03').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page08').style.display='none'; document.getElementById('page01').style.display='block'; document.getElementById('nav-2').style.display='none'; document.getElementById('nav-3').style.display='none'; document.getElementById('nav-1').style.display='block'">Главная</a>
+                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page08').style.display='none'; document.getElementById('page02').style.display='block';">Пульс</a>
+                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page08').style.display='none'; document.getElementById('page03').style.display='block';">Давление</a>
+                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page08').style.display='none'; document.getElementById('page04').style.display='block';">Вес</a>
+                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page08').style.display='none'; document.getElementById('page05').style.display='block';">Вредные привычки</a>
+                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page08').style.display='none'; document.getElementById('page06').style.display='block'; ">Болезни</a>
+                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page08').style.display='none'; document.getElementById('page07').style.display='block'; ">Прописанные лекарства</a>
+                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page08').style.display='block'; ">Непереносимые лекарства</a>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-        <div id='page01' style="padding-left: 500px; padding-top:-40px; position:relative">
+
+        <div id='page01' style="padding-left: 430px; padding-top:-40px; position:relative">
             <div>
                 <button style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
             </div>
-            <div class="dropdown" style="top:43px; position:relative; padding-left:400px">
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Выбрать переод времени
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">За день</a></li>
-                    <li><a class="dropdown-item" href="#">За месяц</a></li>
-                    <li><a class="dropdown-item" href="#">За год</a></li>
-                </ul>
-            </div>
-            <h1 style="padding-left:50px">Пульс</h1>
-            <h2 style="padding-left:50px">За день</h2>
-        
-            <img src="3qb5ZqDkBdY.jpg" style="width:900px;">
+
+
+
             <!-- <a href = '#' onclick = "document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='block';">Вперед</a> -->
         </div>
-        <div id='page02' style='display: none; padding-left: 500px; padding-top:-40px; position:relative; '>
+        <div id='page02' style='display: none; padding-left: 430px; padding-top:-40px; position:relative; '>
             <div>
 
                 <button style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
             </div>
-            <div class="dropdown" style="top:43px; position:relative; padding-left:400px">
+            <div class="dropdown" style="top:70px; position:relative; padding-left:560px">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Выбрать переод времени
+                    Выбрать период времени
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">За день</a></li>
@@ -99,17 +107,36 @@
                     <li><a class="dropdown-item" href="#">За год</a></li>
                 </ul>
             </div>
-            <h1 style="padding-left:50px">Давление</h1>
-            <h2 style="padding-left:50px">За день</h2>
+            <h1 style="padding-left:80px; ">Пульс</h1>
+            <h2 style="padding-left:80px">За день</h2>
+            <img src="3qb5ZqDkBdY.jpg" style="width:900px; ">
+        </div>
+        <div id='page03' style='display: none; padding-left: 430px; padding-top:-40px; position:relative; '>
+            <div>
+
+                <button style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+            </div>
+            <div class="dropdown" style="top:80px; position:relative; padding-left:560px">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Выбрать период времени
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">За день</a></li>
+                    <li><a class="dropdown-item" href="#">За месяц</a></li>
+                    <li><a class="dropdown-item" href="#">За год</a></li>
+                </ul>
+            </div>
+            <h1 style="padding-left:80px">Давление</h1>
+            <h2 style="padding-left:80px">За день</h2>
             <img src="GAQOD40a2gE.jpg" style="width:900px; ">
         </div>
-        <div id='page03' style='display: none;padding-left: 500px; padding-top: -30px; position:relative'>
+        <div id='page04' style='display: none;padding-left: 430px; padding-top: -30px; position:relative'>
             <div>
                 <button style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
             </div>
-            <div class="dropdown" style="top:43px; position:relative; padding-left:400px">
+            <div class="dropdown" style="top:80px; position:relative; padding-left:560px">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Выбрать переод времени
+                    Выбрать период времени
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">За день</a></li>
@@ -117,80 +144,214 @@
                     <li><a class="dropdown-item" href="#">За год</a></li>
                 </ul>
             </div>
-            <h1 style="padding-left:50px">Вес</h1>
-            <h2 style="padding-left:50px">За полгода</h2>
-            <img src="SEWaBOmyUJA.jpg" style="width:900px ; position:relative; padding-left:40px	">
+            <h1 style="padding-left:80px">Вес</h1>
+            <h2 style="padding-left:80px">За полгода</h2>
+            <img src="SEWaBOmyUJA.jpg" style="width:900px ;">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         </div>
-        <div id='page04' style='display: none; padding-left: 500px; padding-top:-40px; position:relative; '>
+        <div id='page05' style='display: none; padding-left: 500px; padding-top:-40px; position:relative; '>
             <div>
 
                 <button style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
             </div>
+            <input type="checkbox" id="check" />
+            <label for="check">Сделать запись</label>
+            
+
+   
+
+                
+               
+                <script>
+                    // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
+                    var myNodelist = document.getElementsByTagName("LI");
+                    var i;
+                    for (i = 0; i < myNodelist.length; i++) {
+                        var span = document.createElement("SPAN");
+                        var txt = document.createTextNode("\u00D7");
+                        span.className = "close";
+                        span.appendChild(txt);
+                        myNodelist[i].appendChild(span);
+                    }
+
+                    // Нажмите на кнопку "Закрыть", чтобы скрыть текущий элемент списка
+                    var close = document.getElementsByClassName("close");
+                    var i;
+                    for (i = 0; i < close.length; i++) {
+                        close[i].onclick = function () {
+                            var div = this.parentElement;
+                            div.style.display = "none";
+                        }
+                    }
+
+                    // Добавить "checked" символ при нажатии на элемент списка
+                    var list = document.querySelector('ul');
+                    list.addEventListener('click', function (ev) {
+                        if (ev.target.tagName === 'LI') {
+                            ev.target.classList.toggle('checked');
+                        }
+                    }, false);
+
+                    // Создайте новый элемент списка при нажатии на кнопку "Добавить"
+                    function newElement() {
+                        var li = document.createElement("li");
+                        var inputValue = document.getElementById("myInput").value;
+                        var t = document.createTextNode(inputValue);
+                        li.appendChild(t);
+                        if (inputValue === '') {
+                            alert("Вы должны что-то написать!");
+                        } else {
+                            document.getElementById("myUL").appendChild(li);
+                        }
+                        document.getElementById("myInput").value = "";
+
+                        var span = document.createElement("SPAN");
+                        var txt = document.createTextNode("\u00D7");
+                        span.className = "close";
+                        span.appendChild(txt);
+                        li.appendChild(span);
+
+                        for (i = 0; i < close.length; i++) {
+                            close[i].onclick = function () {
+                                var div = this.parentElement;
+                                div.style.display = "none";
+                            }
+                        }
+                    }
+                </script>
+
+            </div>
+
+
+            <br>
+        </div>
+            <div id='page06' style='display: none; padding-left: 500px; padding-top:-40px; position:relative'>
+                <div>
+                    <button style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+                </div>
+
+                <h1 style="padding-left:250px">Болезни</h1>
+                <h2 style="padding-left:160px">
+                    22.08.2020-15.09.2020 Коронавирус<br />
+                    11.01.2021-26.01.2021 ОРВИ<br />
+                    07.03.2021-23.03.2021 ОРВИ<br />
+                </h2>
+                <br>
+            </div>
+
+            <div id='page07' style='display: none; padding-left: 500px; padding-top:-40px; position:relative; '>
+                <div>
+
+                    <button style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+                </div>
            
-            <h1 style="padding-left:155px">Вредные привычки</h1>
-            <h2 style="padding-left:250px">
-                1. Курил с 22.03.2018-16.05.2021<br />
-                2. Выпивает<br />
-                3. Грызёт ногти<br />
-            </h2>
-            <br>
-        </div>
-        <div id='page05' style='display: none; padding-left: 500px; padding-top:20px; position:relative'>
-            <div>
-                <button style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+                <div id="popup2" class="popup2">
+                    <a href="#" class="popup_area2"></a>
+                    <div class="popup_body2">
+                        <div class="popup_content2">
+                            <a href="#" class="popup_close2">X</a>
+                            <div class="popup_title2">Титле</div>
+                            <div class="popup_text2">
+                               текст
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <style>
+                        .popup2{
+                            position:fixed;
+                            width:100%;
+                            height:100%;
+                            background-color: rgba(0, 0, 0, 0.89);
+                            top:0;
+                            left:0;
+                            opacity:0;
+                            visibility:hidden;
+                            overflow-y:auto;
+                            overflow-x:hidden;
+
+                        } 
+                        .popup2:target{
+                            opacity:1;
+                            visibility:visible;
+                        }
+                    .popup_body2    {
+                        min-height:100%;
+                        display:flex;
+                        align-items: center;
+                        justify-content:center;
+                        padding: 30px 10px;
+
+
+                    }
+                    .popup_content2{
+                        background-color:#fff;
+                        color: #000;
+                        max-width:800px;
+                        padding: 30px;
+                        position: relative;
+
+                    }
+                    .popup_title2{
+                        font-size:40px;
+                        margin:0px 0px 1em 0px;
+
+                    }
+                    .popup_close2{
+                        position: absolute;
+                        right:10px;
+                        top:10px;
+                        font-size:20px;
+                        color:#000;
+                        text-decoration:none;
+                    }
+                    .popup_area2{
+                        position:absolute;
+                            width:100%;
+                            height:100%;
+                            top:0px;
+                            left:0px;
+                    }
+                    </style>
+
+                    
+                
+              
+
+
+                <h1 style="padding-left:200px">Прописанные лекарства</h1>
+                <h2 style="padding-left:340px">
+                    <ul id="myUL">
+                    </ul>
+                </h2>
+                <a href="#popup2">Сделать запись</a>
+
+
             </div>
+          
 
-            <h1 style="padding-left:250px">Болезни</h1>
-            <h2 style="padding-left:160px">
-                22.08.2020-15.09.2020 Коронавирус<br />
-                11.01.2021-26.01.2021 ОРВИ<br />
-                07.03.2021-23.03.2021 ОРВИ<br />
-            </h2>
-            <br>
-        </div>
-    </div>
-    <div id='page06' style='display: none; padding-left: 500px; padding-top:-40px; position:relative; '>
-        <div>
+                <div id='page08' style='display: none; padding-left: 500px; padding-top:-40px; position:relative; '>
+                    <div>
 
-            <button style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
-        </div>
+                        <button style="padding-left:-500px ; position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+                    </div>
 
 
-        <h1 style="padding-left:200px">Прописанные лекарства</h1>
-        <h2 style="padding-left:340px">
-            1.Глюкофаж<br />
-            2.Арбидол<br />
-            3.Софамет<br />
-        </h2>
-        <br>
+                    <h1 style="padding-left:180px">Непереносимые лекарства</h1>
+                    <h2 style="padding-left:340px">
+                        1.Глимекомб<br />
+                        2.Глиформин<br />
+                        3.Сиофор<br />
+                    </h2>
+                    <br>
+
+                </div>
 
 
-    </div>
-        
-         
-    <div id='page07' style='display: none; padding-left: 500px; padding-top:-40px; position:relative; '>
-        <div>
-
-            <button style="padding-left:-500px ; position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
-        </div>
-        
-
-        <h1 style="padding-left:180px">Непереносимые лекарства</h1>
-        <h2 style="padding-left:340px">
-            1.Глимекомб<br />
-            2.Глиформин<br />
-            3.Сиофор<br />
-        </h2>
-        <br>
-
-    </div>
-       
-
-    </div>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+            </div>
+            <noscript>You need to enable JavaScript to run this app.</noscript>
+            <div id="root"></div>
+            <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -200,6 +361,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
+
