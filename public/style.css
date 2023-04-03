@@ -386,3 +386,9 @@ a {
   background-color: #f1f1f1;
   text-align: center;
 }
+a.text:active, /* активная/посещенная ссылка */
+a.text:hover,  /* при наведении */
+a.text {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
