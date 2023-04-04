@@ -19,7 +19,6 @@
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
-
       Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
@@ -34,39 +33,69 @@
                 <div class="popup_bodypl">
                     <div class="popup_contentpl">
                         <a href="#" class="popup_closepl">X</a>
-                        <div class="popup_titlepl">Сделайте новую запись</div>
+                        <div class="popup_titlepl"></div>
                         <div class="popup_textpl">
                             <form action="action_page.php">
                                 <div class="container">
-                                  <h1>Register</h1>
-                                  <p>Заад</p>
-                                  <hr>
-                              
-                                  <label for="email"><b>Email</b></label>
-                                  <input type="text" placeholder="Enter Email" name="email" required>
-                              
-                                  <label for="psw"><b>Password</b></label>
-                                   <input type="password" placeholder="Enter Password" name="psw" required>
-                              
-                                  <label for="psw-repeat"><b>Repeat Password</b></label>
-                                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                                  <hr>
-                              
-                                  <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-                                  <button type="submit" class="registerbtn">Register</button>
-                                </div>
-                              
-                                <div class="container signin">
-                                  <p>Already have an account? <a href="#">Sign in</a>.</p>
-                                </div>
-                              </form>
+                                    <h1>Зарегестрируйтесь</h1>
+                                    
+                                    <hr>
 
-                            </div>
+                                    <label for="email"><b>Номер Клапана</b></label>
+                                    <input type="text" placeholder="Введите номер клапана" name="email" required>
+
+                                    <label for="psw"><b>Пароль</b></label>
+                                    <input type="password" placeholder="Введите пароль" name="psw" required>
+
+                                    <label for="psw-repeat"><b>Повторите Пароль</b></label>
+                                    <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+                                    <hr>
+
+
+                                    <button type="submit" class="registerbtn">Register</button>
+                                </div>
+
+                                <div class="container signin">
+                                    <p>Уже имеете аккаунт?<a href="#popupvh">   Войдите</a></p>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
                 </div>
-            
-           
+            </div>
+            <div id="popupvh" class="popupvh">
+                <a href="#" class="popup_areavh"></a>
+                <div class="popup_bodyvh">
+                    <div class="popup_contentvh">
+                        <a href="#" class="popup_closevh">X</a>
+                        <div class="popup_titlevh"></div>
+                        <div class="popup_textvh">
+                            <form action="action_page.php">
+                                <div class="container">
+                                    <h1>Войдите</h1>
+                                   
+                                    <hr>
+
+                                    <label for="email"><b>Номер Клапана</b></label>
+                                    <input type="text" placeholder="Введите номер клапана" name="email" required>
+
+                                    <label for="psw"><b>Пароль</b></label>
+                                    <input type="password" placeholder="Введите пароль" name="psw" required>
+                                    <hr />
+                                    <button type="submit" class="registerbtn">Register</button>
+                                </div>
+
+                                <div class="container signin">
+                                    <p>Уже имеете аккаунт?<a href="#">   Войдите</a></p>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="popuppriv" class="popuppriv">
                 <a href="#" class="popup_areapriv"></a>
                 <div class="popup_bodypriv">
@@ -295,19 +324,19 @@
                 </div>
             </div>
 
-            
-            
+
+
 
             <div class="container-fluid">
                 <!-- <label for="exampleDataList" class="form-label">Поиск пациента</label>
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Введите номер клапана">
-                <datalist id="datalistOptions">
-                    <option value="578954">
-                    <option value="578955">
-                    <option value="578956">
-                    <option value="578957">
-                    <option value="578958">
-                </datalist> -->
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Введите номер клапана">
+        <datalist id="datalistOptions">
+            <option value="578954">
+            <option value="578955">
+            <option value="578956">
+            <option value="578957">
+            <option value="578958">
+        </datalist> -->
 
                 <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" width='120%'>Меню</button>
 
@@ -337,11 +366,11 @@
         </nav>
 
         <div class="page01" id='page01'>
-            <form action="#popuppl" target="_blank">  
-            <div>
-                <button href="#popuppl" id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
-            </div>
-        </form>
+            <form action="#popuppl" target="_blank">
+                <div>
+                    <button href="#popuppl" id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+                </div>
+            </form>
             <!-- <a href = '#' onclick = "document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='block';">Вперед</a> -->
         </div>
         <div class="page02" id='page02'>
@@ -359,9 +388,9 @@
                     <li><a class="dropdown-item" href="#">день</a></li>
                 </ul>
                 <a href="#popuppl">Сделать запись</a>
-                
+
             </div>
-            
+
             <h1 style="padding-left:80px; ">Пульс</h1>
             <h2 style="padding-left:80px">За день</h2>
             <img src="3qb5ZqDkBdY.jpg" style="width:900px; ">
@@ -380,7 +409,7 @@
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-               
+
             </div>
             <h1 style="padding-left:80px">Давление</h1>
             <h2 style="padding-left:80px">За день</h2>
@@ -399,7 +428,7 @@
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-                
+
             </div>
             <h1 style="padding-left:80px">Вес</h1>
             <h2 style="padding-left:80px">За полгода</h2>
@@ -408,74 +437,74 @@
         </div>
         <div class="page05" id='page05'>
             <h1 style="padding-left:140px">Вредные привычки</h1>
-        <h2 style="padding-left:160px">
-            <ul id="myUL">
-            </ul>
-        </h2>
-        <a href="#popuppriv">Сделать запись</a>
+            <h2 style="padding-left:160px">
+                <ul id="myUL">
+                </ul>
+            </h2>
+            <a href="#popuppriv">Сделать запись</a>
             <div>
 
                 <button id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
             </div>
-           
 
-            
+
+
         </div>
 
 
         <br>
-    <div class="page06" id='page06'>
-        <div>
-            <button id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+        <div class="page06" id='page06'>
+            <div>
+                <button id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+            </div>
+
+            <h1 style="padding-left:235px">Болезни</h1>
+            <h2 style="padding-left:160px">
+                <ul id="myUL1">
+                </ul>
+            </h2>
+
+            <br>
         </div>
 
-        <h1 style="padding-left:235px">Болезни</h1>
-        <h2 style="padding-left:160px">
-            <ul id="myUL1">
-            </ul>
-        </h2>
-         
-        <br>
-    </div>
+        <div class="page07" id='page07'>
+            <div>
 
-    <div class="page07" id='page07'>
-        <div>
+                <button id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+            </div>
 
-            <button id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
-        </div>
+            <h1 style="padding-left:90px">Прописанные лекарства</h1>
+            <h2 style="padding-left:340px">
+                <ul id="myUL2">
+                </ul>
+            </h2>
+            <a href="#popuplek1">Сделать запись</a>
+            <div>
 
-        <h1 style="padding-left:90px">Прописанные лекарства</h1>
-        <h2 style="padding-left:340px">
-            <ul id="myUL2">
-            </ul>
-        </h2>
-        <a href="#popuplek1">Сделать запись</a>
-        <div>
+                <button id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
+            </div>
 
-            <button id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
-        </div>
-
-    </div>
-
-
-    <div class="page08" id='page08'>
-        <div>
-
-            <button id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
         </div>
 
 
-        <h1 style="padding-left:90px">Непереносимые лекарства</h1>
-        <h2 style="padding-left:340px">
-            
+        <div class="page08" id='page08'>
+            <div>
+
+                <button id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+            </div>
+
+
+            <h1 style="padding-left:90px">Непереносимые лекарства</h1>
+            <h2 style="padding-left:340px">
+
                 <ul id="myULlek2">
                 </ul>
             </h2>
             <a href="#popuplek2">Сделать запись</a>
-        
-        <br>
-        
-    </div>
+
+            <br>
+
+        </div>
     </div>
 
 
@@ -485,13 +514,11 @@
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
-
       You can add webfonts, meta tags, or analytics to this file.
       The build step will place the bundled scripts into the <body> tag.
-
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    
+
 </body>
 </html>
