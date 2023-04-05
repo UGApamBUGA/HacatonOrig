@@ -385,9 +385,9 @@
 
 .page08 {
     display: none;
-    padding-left: 500px;
-    padding-top: -40px;
-    position: relative;
+   width: auto;
+   height: auto;
+   position: relative;
 }
 
 * {
@@ -447,9 +447,4 @@ a {
     text-align: center;
 }
 
-a.text:active, /* активная/посещенная ссылка */
-a.text:hover, /* при наведении */
-a.text {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
+
