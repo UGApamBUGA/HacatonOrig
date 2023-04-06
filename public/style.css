@@ -1,3 +1,230 @@
+.popuppul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.89);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.popuppul:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup_bodypul {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup_contentpul {
+    background-color: #fff;
+    color: #000;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+}
+
+.popup_titlepul {
+    font-size: 40px;
+    margin: 0px 0px 1em 0px;
+}
+
+.popup_closepul {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.popup_areapul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+
+.popupdv {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.89);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.popupdv:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup_bodydv {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup_contentdv {
+    background-color: #fff;
+    color: #000;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+}
+
+.popup_titledv {
+    font-size: 40px;
+    margin: 0px 0px 1em 0px;
+}
+
+.popup_closedv {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.popup_areadv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+
+.popupves {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.89);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.popupves:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup_bodyves {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup_contentves {
+    background-color: #fff;
+    color: #000;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+}
+
+.popup_titleves {
+    font-size: 40px;
+    margin: 0px 0px 1em 0px;
+}
+
+.popup_closeves {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.popup_areaves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+
+.popupreg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.89);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+    .popupreg:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.popup_bodyreg {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup_contentreg {
+    background-color: #fff;
+    color: #000;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+}
+
+.popup_titlereg {
+    font-size: 40px;
+    margin: 0px 0px 1em 0px;
+}
+
+.popup_closereg {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.popup_areareg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
 .popupvh {
     position: fixed;
     width: 100%;
@@ -385,9 +612,9 @@
 
 .page08 {
     display: none;
-   width: auto;
-   height: auto;
-   position: relative;
+    padding-left: 500px;
+    padding-top: -40px;
+    position: relative;
 }
 
 * {
@@ -447,4 +674,9 @@ a {
     text-align: center;
 }
 
-
+a.text:active, /* активная/посещенная ссылка */
+a.text:hover, /* при наведении */
+a.text {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
