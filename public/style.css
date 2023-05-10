@@ -28,13 +28,15 @@
     background-color: #fff;
     color: #000;
     max-width: 800px;
-    padding: 30px;
+    padding: 40px;
     position: relative;
 }
 
 .popup_titlepul {
     font-size: 40px;
     margin: 0px 0px 1em 0px;
+    position: relative;
+    padding-top: 20px;
 }
 
 .popup_closepul {
