@@ -96,18 +96,18 @@
                 </div>
             </div>
 
-            <div id="popup" class="popuppul">
+            <div id="popuppul" class="popuppul">
                 <a href="#" class="popup_areapul"></a>
                 <div class="popup_bodypul">
                     <div class="popup_contentpul">
                         <a href="#" class="popup_closepul">X</a>
                         <div class="popup_titlepul">Сделайте новую запись</div>
-                        <div class="popup_textpul">
-                            <h2>Добавьте новое лекарство в список</h2>
+                        <div class="popup_textpul" style="position: relative;">
+                            <h2>Внесите новые измерения пульса</h2>
                             <div id="myDIV" class="header">
-                                <h2>Добавьте новое лекарство в список</h2>
+                                
                                 <input type="text" id="myInput" placeholder="Название...">
-                                <span onclick="newElement()" class="addBtn">Добавить</span>
+                                <span onclick="newElement()" class="addBtn"><button href="#popuppl" id="butvhod" style=" position:relative;    width:720px; height: 70px; font-size:24px; float:right; " class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию --></span>
                                 <script>
                                     // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
                                     var myNodelist = document.getElementsByTagName("LI");
@@ -181,238 +181,10 @@
                         <div class="popup_titledv">Сделайте новую запись</div>
                         <div class="popup_textdv">
                             <h2>Добавьте новое лекарство в список</h2>
-                            <div id="myDIV" class="header">
-                                <h2>Добавьте новое лекарство в список</h2>
-                                <input type="text" id="myInput" placeholder="Название...">
-                                <span onclick="newElement()" class="addBtn">Добавить</span>
-                                <script>
-                                    // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
-                                    var myNodelist = document.getElementsByTagName("LI");
-                                    var i;
-                                    for (i = 0; i < myNodelist.length; i++) {
-                                        var span = document.createElement("SPAN");
-                                        var txt = document.createTextNode("\u00D7");
-                                        span.className = "close";
-                                        span.appendChild(txt);
-                                        myNodelist[i].appendChild(span);
-                                    }
-
-                                    // Нажмите на кнопку "Закрыть", чтобы скрыть текущий элемент списка
-                                    var close = document.getElementsByClassName("close");
-                                    var i;
-                                    for (i = 0; i < close.length; i++) {
-                                        close[i].onclick = function () {
-                                            var div = this.parentElement;
-                                            div.style.display = "none";
-                                        }
-                                    }
-
-                                    // Добавить "checked" символ при нажатии на элемент списка
-                                    var list = document.querySelector('ul');
-                                    list.addEventListener('click', function (ev) {
-                                        if (ev.target.tagName === 'LI') {
-                                            ev.target.classList.toggle('checked');
-                                        }
-                                    }, false);
-
-                                    // Создайте новый элемент списка при нажатии на кнопку "Добавить"
-                                    function newElement() {
-                                        var li = document.createElement("li");
-                                        var inputValue = document.getElementById("myInput").value;
-                                        var t = document.createTextNode(inputValue);
-                                        li.appendChild(t);
-                                        if (inputValue === '') {
-                                            alert("Вы должны что-то написать!");
-                                        } else {
-                                            document.getElementById("myUL").appendChild(li);
-                                        }
-                                        document.getElementById("myInput").value = "";
-
-                                        var span = document.createElement("SPAN");
-                                        var txt = document.createTextNode("\u00D7");
-                                        span.className = "close";
-                                        span.appendChild(txt);
-                                        li.appendChild(span);
-
-                                        for (i = 0; i < close.length; i++) {
-                                            close[i].onclick = function () {
-                                                var div = this.parentElement;
-                                                div.style.display = "none";
-                                            }
-                                        }
-                                    }
-                                </script>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="popupves" class="popupves">
-                <a href="#" class="popup_areaves"></a>
-                <div class="popup_bodyves">
-                    <div class="popup_contentves">
-                        <a href="#" class="popup_closeves">X</a>
-                        <div class="popup_titleves">Сделайте новую запись</div>
-                        <div class="popup_textves">
-                            <h2>Добавьте новое лекарство в список</h2>
-                            <div id="myDIV" class="header">
-                                <h2>Добавьте новое лекарство в список</h2>
-                                <input type="text" id="myInput" placeholder="Название...">
-                                <span onclick="newElement()" class="addBtn">Добавить</span>
-                                <script>
-                                    // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
-                                    var myNodelist = document.getElementsByTagName("LI");
-                                    var i;
-                                    for (i = 0; i < myNodelist.length; i++) {
-                                        var span = document.createElement("SPAN");
-                                        var txt = document.createTextNode("\u00D7");
-                                        span.className = "close";
-                                        span.appendChild(txt);
-                                        myNodelist[i].appendChild(span);
-                                    }
-
-                                    // Нажмите на кнопку "Закрыть", чтобы скрыть текущий элемент списка
-                                    var close = document.getElementsByClassName("close");
-                                    var i;
-                                    for (i = 0; i < close.length; i++) {
-                                        close[i].onclick = function () {
-                                            var div = this.parentElement;
-                                            div.style.display = "none";
-                                        }
-                                    }
-
-                                    // Добавить "checked" символ при нажатии на элемент списка
-                                    var list = document.querySelector('ul');
-                                    list.addEventListener('click', function (ev) {
-                                        if (ev.target.tagName === 'LI') {
-                                            ev.target.classList.toggle('checked');
-                                        }
-                                    }, false);
-
-                                    // Создайте новый элемент списка при нажатии на кнопку "Добавить"
-                                    function newElement() {
-                                        var li = document.createElement("li");
-                                        var inputValue = document.getElementById("myInput").value;
-                                        var t = document.createTextNode(inputValue);
-                                        li.appendChild(t);
-                                        if (inputValue === '') {
-                                            alert("Вы должны что-то написать!");
-                                        } else {
-                                            document.getElementById("myUL").appendChild(li);
-                                        }
-                                        document.getElementById("myInput").value = "";
-
-                                        var span = document.createElement("SPAN");
-                                        var txt = document.createTextNode("\u00D7");
-                                        span.className = "close";
-                                        span.appendChild(txt);
-                                        li.appendChild(span);
-
-                                        for (i = 0; i < close.length; i++) {
-                                            close[i].onclick = function () {
-                                                var div = this.parentElement;
-                                                div.style.display = "none";
-                                            }
-                                        }
-                                    }
-                                </script>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="popuppriv" class="popuppriv">
-                <a href="#" class="popup_areapriv"></a>
-                <div class="popup_bodypriv">
-                    <div class="popup_contentpriv">
-                        <a href="#" class="popup_closepriv">X</a>
-                        <div class="popup_titlepriv">Сделайте новую запись</div>
-                        <div class="popup_textpriv">
-                            <h2>Добавьте новое лекарство в список</h2>
-                            <div id="myDIV" class="header">
-                                <h2>Добавьте новое лекарство в список</h2>
-                                <input type="text" id="myInput" placeholder="Название...">
-                                <span onclick="newElement()" class="addBtn">Добавить</span>
-                                <script>
-                                    // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
-                                    var myNodelist = document.getElementsByTagName("LI");
-                                    var i;
-                                    for (i = 0; i < myNodelist.length; i++) {
-                                        var span = document.createElement("SPAN");
-                                        var txt = document.createTextNode("\u00D7");
-                                        span.className = "close";
-                                        span.appendChild(txt);
-                                        myNodelist[i].appendChild(span);
-                                    }
-
-                                    // Нажмите на кнопку "Закрыть", чтобы скрыть текущий элемент списка
-                                    var close = document.getElementsByClassName("close");
-                                    var i;
-                                    for (i = 0; i < close.length; i++) {
-                                        close[i].onclick = function () {
-                                            var div = this.parentElement;
-                                            div.style.display = "none";
-                                        }
-                                    }
-
-                                    // Добавить "checked" символ при нажатии на элемент списка
-                                    var list = document.querySelector('ul');
-                                    list.addEventListener('click', function (ev) {
-                                        if (ev.target.tagName === 'LI') {
-                                            ev.target.classList.toggle('checked');
-                                        }
-                                    }, false);
-
-                                    // Создайте новый элемент списка при нажатии на кнопку "Добавить"
-                                    function newElement() {
-                                        var li = document.createElement("li");
-                                        var inputValue = document.getElementById("myInput").value;
-                                        var t = document.createTextNode(inputValue);
-                                        li.appendChild(t);
-                                        if (inputValue === '') {
-                                            alert("Вы должны что-то написать!");
-                                        } else {
-                                            document.getElementById("myUL").appendChild(li);
-                                        }
-                                        document.getElementById("myInput").value = "";
-
-                                        var span = document.createElement("SPAN");
-                                        var txt = document.createTextNode("\u00D7");
-                                        span.className = "close";
-                                        span.appendChild(txt);
-                                        li.appendChild(span);
-
-                                        for (i = 0; i < close.length; i++) {
-                                            close[i].onclick = function () {
-                                                var div = this.parentElement;
-                                                div.style.display = "none";
-                                            }
-                                        }
-                                    }
-                                </script>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="popupbol" class="popupbol">
-                <a href="#" class="popup_areabol"></a>
-                <div class="popup_bodybol">
-                    <div class="popup_contentbol">
-                        <a href="#" class="popup_closebol">X</a>
-                        <div class="popup_titlebol">Сделайте новую запись</div>
-                        <div class="popup_textbol">
-                            <h2>Добавьте новое лекарство в список</h2>
-                            <div id="myDIV" class="header">
+                            <div id="myDIV1" class="header">
                                 <h2>Добавьте новое лекарство в список</h2>
                                 <input type="text" id="myInput1" placeholder="Название...">
-                                <span onclick="newElement()" class="addBtn1">Добавить</span>
+                                <span onclick="newElement1()" class="addBtn">Добавить</span>
                                 <script>
                                     // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
                                     var myNodelist = document.getElementsByTagName("LI");
@@ -444,8 +216,8 @@
                                     }, false);
 
                                     // Создайте новый элемент списка при нажатии на кнопку "Добавить"
-                                    function newElement() {
-                                        var li = document.createElement("li1");
+                                    function newElement1() {
+                                        var li = document.createElement("li");
                                         var inputValue = document.getElementById("myInput1").value;
                                         var t = document.createTextNode(inputValue);
                                         li.appendChild(t);
@@ -476,19 +248,19 @@
                     </div>
                 </div>
             </div>
-
-            <div id="popuplek1" class="popuplek1">
-                <a href="#" class="popup_arealek1"></a>
-                <div class="popup_bodylek1">
-                    <div class="popup_contentlek1">
-                        <a href="#" class="popup_closelek1">X</a>
-                        <div class="popup_titlelek1">Сделайте новую запись</div>
-                        <div class="popup_textlek1">
+            
+           <div id="popupves" class="popupves">
+                <a href="#" class="popup_areaves"></a>
+                <div class="popup_bodyves">
+                    <div class="popup_contentves">
+                        <a href="#" class="popup_closeves">X</a>
+                        <div class="popup_titleves">Сделайте новую запись</div>
+                        <div class="popup_textves">
                             <h2>Добавьте новое лекарство в список</h2>
                             <div id="myDIV2" class="header">
                                 <h2>Добавьте новое лекарство в список</h2>
                                 <input type="text" id="myInput2" placeholder="Название...">
-                                <span onclick="newElement()" class="addBtn2">Добавить</span>
+                                <span onclick="newElement2()" class="addBtn">Добавить</span>
                                 <script>
                                     // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
                                     var myNodelist = document.getElementsByTagName("LI");
@@ -520,7 +292,7 @@
                                     }, false);
 
                                     // Создайте новый элемент списка при нажатии на кнопку "Добавить"
-                                    function newElement() {
+                                    function newElement2() {
                                         var li = document.createElement("li");
                                         var inputValue = document.getElementById("myInput2").value;
                                         var t = document.createTextNode(inputValue);
@@ -531,6 +303,234 @@
                                             document.getElementById("myUL2").appendChild(li);
                                         }
                                         document.getElementById("myInput2").value = "";
+
+                                        var span = document.createElement("SPAN");
+                                        var txt = document.createTextNode("\u00D7");
+                                        span.className = "close";
+                                        span.appendChild(txt);
+                                        li.appendChild(span);
+
+                                        for (i = 0; i < close.length; i++) {
+                                            close[i].onclick = function () {
+                                                var div = this.parentElement;
+                                                div.style.display = "none";
+                                            }
+                                        }
+                                    }
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="popuppriv" class="popuppriv">
+                <a href="#" class="popup_areapriv"></a>
+                <div class="popup_bodypriv">
+                    <div class="popup_contentpriv">
+                        <a href="#" class="popup_closepriv">X</a>
+                        <div class="popup_titlepriv">Сделайте новую запись</div>
+                        <div class="popup_textpriv">
+                            <h2>Добавьте новое лекарство в список</h2>
+                            <div id="myDIV3" class="header">
+                                <h2>Добавьте новое лекарство в список</h2>
+                                <input type="text" id="myInput3" placeholder="Название...">
+                                <span onclick="newElement3()" class="addBtn">Добавить</span>
+                                <script>
+                                    // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
+                                    var myNodelist = document.getElementsByTagName("LI");
+                                    var i;
+                                    for (i = 0; i < myNodelist.length; i++) {
+                                        var span = document.createElement("SPAN");
+                                        var txt = document.createTextNode("\u00D7");
+                                        span.className = "close";
+                                        span.appendChild(txt);
+                                        myNodelist[i].appendChild(span);
+                                    }
+
+                                    // Нажмите на кнопку "Закрыть", чтобы скрыть текущий элемент списка
+                                    var close = document.getElementsByClassName("close");
+                                    var i;
+                                    for (i = 0; i < close.length; i++) {
+                                        close[i].onclick = function () {
+                                            var div = this.parentElement;
+                                            div.style.display = "none";
+                                        }
+                                    }
+
+                                    // Добавить "checked" символ при нажатии на элемент списка
+                                    var list = document.querySelector('ul');
+                                    list.addEventListener('click', function (ev) {
+                                        if (ev.target.tagName === 'LI') {
+                                            ev.target.classList.toggle('checked');
+                                        }
+                                    }, false);
+
+                                    // Создайте новый элемент списка при нажатии на кнопку "Добавить"
+                                    function newElement3() {
+                                        var li = document.createElement("li");
+                                        var inputValue = document.getElementById("myInput3").value;
+                                        var t = document.createTextNode(inputValue);
+                                        li.appendChild(t);
+                                        if (inputValue === '') {
+                                            alert("Вы должны что-то написать!");
+                                        } else {
+                                            document.getElementById("myUL3").appendChild(li);
+                                        }
+                                        document.getElementById("myInput3").value = "";
+
+                                        var span = document.createElement("SPAN");
+                                        var txt = document.createTextNode("\u00D7");
+                                        span.className = "close";
+                                        span.appendChild(txt);
+                                        li.appendChild(span);
+
+                                        for (i = 0; i < close.length; i++) {
+                                            close[i].onclick = function () {
+                                                var div = this.parentElement;
+                                                div.style.display = "none";
+                                            }
+                                        }
+                                    }
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="popupbol" class="popupbol">
+                <a href="#" class="popup_areabol"></a>
+                <div class="popup_bodybol">
+                    <div class="popup_contentbol">
+                        <a href="#" class="popup_closebol">X</a>
+                        <div class="popup_titlebol">Сделайте новую запись</div>
+                        <div class="popup_textbol">
+                            <h2>Добавьте новое лекарство в список</h2>
+                            <div id="myDIV4" class="header">
+                                <h2>Добавьте новое лекарство в список</h2>
+                                <input type="text" id="myInput4" placeholder="Название...">
+                                <span onclick="newElement4()" class="addBtn1">Добавить</span>
+                                <script>
+                                    // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
+                                    var myNodelist = document.getElementsByTagName("LI");
+                                    var i;
+                                    for (i = 0; i < myNodelist.length; i++) {
+                                        var span = document.createElement("SPAN");
+                                        var txt = document.createTextNode("\u00D7");
+                                        span.className = "close";
+                                        span.appendChild(txt);
+                                        myNodelist[i].appendChild(span);
+                                    }
+
+                                    // Нажмите на кнопку "Закрыть", чтобы скрыть текущий элемент списка
+                                    var close = document.getElementsByClassName("close");
+                                    var i;
+                                    for (i = 0; i < close.length; i++) {
+                                        close[i].onclick = function () {
+                                            var div = this.parentElement;
+                                            div.style.display = "none";
+                                        }
+                                    }
+
+                                    // Добавить "checked" символ при нажатии на элемент списка
+                                    var list = document.querySelector('ul');
+                                    list.addEventListener('click', function (ev) {
+                                        if (ev.target.tagName === 'LI') {
+                                            ev.target.classList.toggle('checked');
+                                        }
+                                    }, false);
+
+                                    // Создайте новый элемент списка при нажатии на кнопку "Добавить"
+                                    function newElement4() {
+                                        var li = document.createElement("li1");
+                                        var inputValue = document.getElementById("myInput4").value;
+                                        var t = document.createTextNode(inputValue);
+                                        li.appendChild(t);
+                                        if (inputValue === '') {
+                                            alert("Вы должны что-то написать!");
+                                        } else {
+                                            document.getElementById("myUL4").appendChild(li);
+                                        }
+                                        document.getElementById("myInput4").value = "";
+
+                                        var span = document.createElement("SPAN");
+                                        var txt = document.createTextNode("\u00D7");
+                                        span.className = "close";
+                                        span.appendChild(txt);
+                                        li.appendChild(span);
+
+                                        for (i = 0; i < close.length; i++) {
+                                            close[i].onclick = function () {
+                                                var div = this.parentElement;
+                                                div.style.display = "none";
+                                            }
+                                        }
+                                    }
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="popuplek1" class="popuplek1">
+                <a href="#" class="popup_arealek1"></a>
+                <div class="popup_bodylek1">
+                    <div class="popup_contentlek1">
+                        <a href="#" class="popup_closelek1">X</a>
+                        <div class="popup_titlelek1">Сделайте новую запись</div>
+                        <div class="popup_textlek1">
+                            <h2>Добавьте новое лекарство в список</h2>
+                            <div id="myDIV5" class="header">
+                                <h2>Добавьте новое лекарство в список</h2>
+                                <input type="text" id="myInput5" placeholder="Название...">
+                                <span onclick="newElement5()" class="addBtn2">Добавить</span>
+                                <script>
+                                    // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
+                                    var myNodelist = document.getElementsByTagName("LI");
+                                    var i;
+                                    for (i = 0; i < myNodelist.length; i++) {
+                                        var span = document.createElement("SPAN");
+                                        var txt = document.createTextNode("\u00D7");
+                                        span.className = "close";
+                                        span.appendChild(txt);
+                                        myNodelist[i].appendChild(span);
+                                    }
+
+                                    // Нажмите на кнопку "Закрыть", чтобы скрыть текущий элемент списка
+                                    var close = document.getElementsByClassName("close");
+                                    var i;
+                                    for (i = 0; i < close.length; i++) {
+                                        close[i].onclick = function () {
+                                            var div = this.parentElement;
+                                            div.style.display = "none";
+                                        }
+                                    }
+
+                                    // Добавить "checked" символ при нажатии на элемент списка
+                                    var list = document.querySelector('ul');
+                                    list.addEventListener('click', function (ev) {
+                                        if (ev.target.tagName === 'LI') {
+                                            ev.target.classList.toggle('checked');
+                                        }
+                                    }, false);
+
+                                    // Создайте новый элемент списка при нажатии на кнопку "Добавить"
+                                    function newElement5() {
+                                        var li = document.createElement("li");
+                                        var inputValue = document.getElementById("myInput5").value;
+                                        var t = document.createTextNode(inputValue);
+                                        li.appendChild(t);
+                                        if (inputValue === '') {
+                                            alert("Вы должны что-то написать!");
+                                        } else {
+                                            document.getElementById("myUL5").appendChild(li);
+                                        }
+                                        document.getElementById("myInput5").value = "";
 
                                         var span = document.createElement("SPAN");
                                         var txt = document.createTextNode("\u00D7");
@@ -561,10 +561,10 @@
                         <div class="popup_titlelek2">Сделайте новую запись</div>
                         <div class="popup_textlek2">
                             <h2>Добавьте новое лекарство в список</h2>
-                            <div id="myDIV2" class="header">
+                            <div id="myDIV6" class="header">
                                 <h2>Добавьте новое лекарство в список</h2>
-                                <input type="text" id="myInput2" placeholder="Название...">
-                                <span onclick="newElement()" class="addBtn2">Добавить</span>
+                                <input type="text" id="myInput6" placeholder="Название...">
+                                <span onclick="newElement6()" class="addBtn2">Добавить</span>
                                 <script>
                                     // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
                                     var myNodelist = document.getElementsByTagName("LI");
@@ -596,17 +596,17 @@
                                     }, false);
 
                                     // Создайте новый элемент списка при нажатии на кнопку "Добавить"
-                                    function newElement() {
+                                    function newElement6() {
                                         var li = document.createElement("li");
-                                        var inputValue = document.getElementById("myInput2").value;
+                                        var inputValue = document.getElementById("myInput6").value;
                                         var t = document.createTextNode(inputValue);
                                         li.appendChild(t);
                                         if (inputValue === '') {
                                             alert("Вы должны что-то написать!");
                                         } else {
-                                            document.getElementById("myUL2").appendChild(li);
+                                            document.getElementById("myUL6").appendChild(li);
                                         }
-                                        document.getElementById("myInput2").value = "";
+                                        document.getElementById("myInput6").value = "";
 
                                         var span = document.createElement("SPAN");
                                         var txt = document.createTextNode("\u00D7");
@@ -631,7 +631,7 @@
 
 
 
-            <div class="container-fluid">
+          <!---  <div class="container-fluid">
                 <label for="exampleDataList" class="form-label">Поиск пациента</label>
         <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Введите номер клапана">
         <datalist id="datalistOptions">
@@ -640,7 +640,7 @@
             <option value="578956">
             <option value="578957">
             <option value="578958">
-        </datalist>
+        </datalist> --->
 
                 <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" width='120%'>Меню</button>
 
@@ -663,17 +663,18 @@
                             <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page08').style.display='none'; document.getElementById('page06').style.display='block'; ">Болезни</a>
                             <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page08').style.display='none'; document.getElementById('page07').style.display='block'; ">Прописанные лекарства</a>
                             <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page03').style.display='none'; document.getElementById('page08').style.display='block'; ">Непереносимые лекарства</a>
-                            <a class='btn btn-outline-dark' href='#' onclick="document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='none'; document.getElementById('page04').style.display='none'; document.getElementById('page05').style.display='none'; document.getElementById('page06').style.display='none'; document.getElementById('page07').style.display='none'; document.getElementById('page08').style.display='none'; document.getElementById('page09').style.display='block'; ">Непереносимые лекарства</a>
+                           
                         </div>
                     </div>
                 </div>
-            </div>
+           
         </nav>
+
 
         <div class="page01" id='page01'>
             <form action="#popupreg" target="_self">
                 <div>
-                    <button href="#popupreg" id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
+                    <button href="#popupreg" id="butvhod" style="position:relative; padding-right: 20px; width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
                 </div>
             </form>
             <!-- <a href = '#' onclick = "document.getElementById('page01').style.display='none'; document.getElementById('page02').style.display='block';">Вперед</a> -->
@@ -705,7 +706,7 @@
                 </div>
             </div>
             <img src="3qb5ZqDkBdY.jpg" style="width:900px; padding-top: 100px; ">
-            <form action="#popuplek1" target="_self">
+            <form action="#popuppul" target="_self">
 
                 <div>
                     <button href="#popuppl" id="butvhod" style=" position:relative;    width:300px; height: 90px; font-size:33px; float:right; " class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
@@ -732,7 +733,7 @@
             <h1 style="padding-left:80px">Давление</h1>
             <h2 style="padding-left:80px">За день</h2>
             <img src="GAQOD40a2gE.jpg" style="width:900px; ">
-            <form action="#popuplek1" target="_blank">
+            <form action="#popupdv" target="_self">
 
                 <div>
                     <button href="#popuppl" id="butvhod" style=" position:relative;    width:300px; height: 90px; font-size:33px; float:right; " class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
@@ -760,7 +761,7 @@
             <h2 style="padding-left:80px">За полгода</h2>
             <img src="SEWaBOmyUJA.jpg" style="width:900px ;">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-            <form action="#popuplek1" target="_self">
+            <form action="#popupves" target="_self">
 
                 <div>
                     <button href="#popuppl" id="butvhod" style=" position:relative;    width:300px; height: 90px; font-size:33px; float:right; " class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
@@ -775,9 +776,15 @@
             </form>
             <h1 style="padding-left:140px">Вредные привычки</h1>
             <h2 style="padding-left:160px">
-                <ul id="myUL">
+                <ul id="myUL3">
                 </ul>
             </h2>
+            <form action="#popuppriv" target="_self">
+
+                <div>
+                    <button href="#popuppl" id="butvhod" style=" position:relative;    width:300px; height: 90px; font-size:33px; float:right; " class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
+                </div>
+            </form>
         </div>
 
 
@@ -791,11 +798,16 @@
 
             <h1 style="padding-left:235px">Болезни</h1>
             <h2 style="padding-left:160px">
-                <ul id="myUL1">
+                <ul id="myUL4">
                 </ul>
             </h2>
 
-            <br>
+            <form action="#popupbol" target="_self">
+
+                <div>
+                    <button href="#popuppl" id="butvhod" style=" position:relative;    width:300px; height: 90px; font-size:33px; float:right; " class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
+                </div>
+            </form>
         </div>
 
         <div class="page07" id='page07'>
@@ -806,14 +818,16 @@
             </form>
             <h1 style="padding-left:90px">Прописанные лекарства</h1>
             <h2 style="padding-left:340px">
-                <ul id="myUL2">
+                <ul id="myUL5">
                 </ul>
             </h2>
             <a href="#popuplek1">Сделать запись</a>
-            <div>
+            <form action="#popuplek1" target="_self">
 
-                <button id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
-            </div>
+                <div>
+                    <button href="#popuppl" id="butvhod" style=" position:relative; padding-top: 100px;   width:300px; height: 90px; font-size:33px; float:right; " class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
+                </div>
+            </form>
 
         </div>
 
@@ -829,10 +843,10 @@
             <h1 style="padding-left:90px">Непереносимые лекарства</h1>
             <h2 style="padding-left:340px">
 
-                <ul id="myULlek2">
+                <ul id="myUL6">
                 </ul>
             </h2>
-            <form action="#popuppl" target="_self">
+            <form action="#popuplek2" target="_self">
 
                 <div>
                     <button href="#popuppl" id="butvhod" style=" position:relative; padding-top: 100px;   width:300px; height: 90px; font-size:33px; float:right; " class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
@@ -842,7 +856,9 @@
             <br>
 
         </div>
-    </div>
+                </div>
+
+    
     <div class="doc" id="doc">
         dnaljk:fNlnfonfOanfaF
     </div>
