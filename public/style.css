@@ -680,3 +680,14 @@ a.text {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
+
+.droppl{
+padding-left: 600px;
+position:fixed;
+padding-top: 100px;
+}
+.doc{
+    display: none;
+        
+
+}
