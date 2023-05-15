@@ -179,12 +179,11 @@
                     <div class="popup_contentdv">
                         <a href="#" class="popup_closedv">X</a>
                         <div class="popup_titledv">Сделайте новую запись</div>
-                        <div class="popup_textdv">
-                            <h2>Добавьте новое лекарство в список</h2>
+                        <div class="popup_textdv" style="position: relative;">
+                            <h2>Внесите новые измерения пульса</h2>
                             <div id="myDIV1" class="header">
-                                <h2>Добавьте новое лекарство в список</h2>
                                 <input type="text" id="myInput1" placeholder="Название...">
-                                <span onclick="newElement1()" class="addBtn">Добавить</span>
+                                <span onclick="newElement1()" class="addBtn"><button href="#popuppl" id="butvhod" style=" position:relative;    width:720px; height: 70px; font-size:24px; float:right; " class='btn btn-outline-dark'>Сделать запись</button>  </span>
                                 <script>
                                     // Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
                                     var myNodelist = document.getElementsByTagName("LI");
@@ -719,6 +718,7 @@
                     <button href="#popuppl" id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
                 </div>
             </form>
+            <div class="dropdv">
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     Выбрать период времени
@@ -730,9 +730,10 @@
                 </ul>
 
             </div>
-            <h1 style="padding-left:80px">Давление</h1>
-            <h2 style="padding-left:80px">За день</h2>
-            <img src="GAQOD40a2gE.jpg" style="width:900px; ">
+        </div>
+            <h1 style="padding-left:80px; padding-top: 90px; position: fixed;">Давление</h1>
+           
+            <img src="GAQOD40a2gE.jpg" style="width:900px; padding-top: 100px; ">
             <form action="#popupdv" target="_self">
 
                 <div>
@@ -746,6 +747,7 @@
                     <button href="#popuppl" id="butvhod" style="position:relative;  width:200px; height: 80px; font-size:30px; float:right; margin-top:10px" class='btn btn-outline-dark'>Войти</button> <!-- написать функцию -->
                 </div>
             </form>
+            <div class="dropves">
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     Выбрать период времени
@@ -757,9 +759,10 @@
                 </ul>
 
             </div>
-            <h1 style="padding-left:80px">Вес</h1>
-            <h2 style="padding-left:80px">За полгода</h2>
-            <img src="SEWaBOmyUJA.jpg" style="width:900px ;">
+        </div>
+            <h1 style="padding-left:80px;  padding-top: 90px; position: fixed;">Вес</h1>
+            
+            <img src="SEWaBOmyUJA.jpg" style="width:900px; padding-top: 100px;">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
             <form action="#popupves" target="_self">
 
@@ -821,7 +824,7 @@
                 <ul id="myUL5">
                 </ul>
             </h2>
-            <a href="#popuplek1">Сделать запись</a>
+            
             <form action="#popuplek1" target="_self">
 
                 <div>
@@ -846,12 +849,14 @@
                 <ul id="myUL6">
                 </ul>
             </h2>
+            <div style="position: relative;"></div>
             <form action="#popuplek2" target="_self">
 
-                <div>
-                    <button href="#popuppl" id="butvhod" style=" position:relative; padding-top: 100px;   width:300px; height: 90px; font-size:33px; float:right; " class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
-                </div>
+                
+                    <button href="#popuppl" id="butvhod" style=" position:absolute;  width:300px; height: 90px; font-size:33px; right:0; bottom: 0; " class='btn btn-outline-dark'>Сделать запись</button> <!-- написать функцию -->
+                
             </form>
+        </div>
 
             <br>
 
